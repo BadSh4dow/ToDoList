@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = ()=>{
     return(
-        <form action="javascript:void(0);">
+        <form>
       <input id="tarea" type="text" name="tarea" placeholder="Descripción de la tarea"/>
       <select name="prioridad" id="prioridad">
         <option value="" disabled selected>Prioridad</option>
