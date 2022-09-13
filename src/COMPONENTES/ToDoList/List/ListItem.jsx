@@ -1,9 +1,8 @@
 import React from "react";
 
-const ListItem= ({text},{priority})=>{
+const ListItem= ({text})=>{
     return(
         <React.Fragment>
-
             <li>{text}</li>
         </React.Fragment>
     )
