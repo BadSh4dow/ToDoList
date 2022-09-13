@@ -1,16 +1,17 @@
 import React from "react";
-import ListItem from "./ListItem";
 
-
-const List= ()=>{
+const List= (props)=>{
     return(
     <React.Fragment>
         <h3>Tareas</h3>
         <ul id="lista-tareas">
-        <ListItem/>
+            {
+                props.renderLista.map((item, key) =>{
+                    return <li key={key}>{item.tarea}{item.prioridad}</li>
+                })
+            }
         </ul>
     </React.Fragment>
-        
     )
 }
 export default List;

@@ -1,23 +1,21 @@
 import React from "react";
-import ListItem from "../List/ListItem";
-import List from "../List/List";
 
-const Form = ()=>{
+const Form = (props)=>{
     return(
-        <form>
+      <form action={"#"}>
       <input id="tarea" type="text" name="tarea" placeholder="Descripción de la tarea"/>
-      <select name="prioridad" id="prioridad">
-        <option value="" disabled selected>Prioridad</option>
-        <option value="prioridad-baja">baja</option>
-        <option value="prioridad-media">media</option>
-        <option value="prioridad-alta">alta</option>
-      </select>
-      <button id="agregar" onClick={()=>{
-        const New = <ListItem text= {document.getElementById("tarea").TextContent}
-                  />
-        document.getElementById("lista-tareas").appendChild(New)    
-      }}>Agregar!</button>
+        <select name="prioridad" id="prioridad">
+          <option value="">Prioridad</option>
+          <option value="priorriorididad-baja">baja</option>
+          <option value="pad-media">media</option>
+          <option value="prioridad-alta">alta</option>
+        </select>
+      <button id="agregar" type="button" onClick={props.eventoBoton}>Agregar!</button>
     </form>
     )
 }
 export default Form;
+
+
+
+
